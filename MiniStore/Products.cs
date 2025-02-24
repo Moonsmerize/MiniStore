@@ -12,7 +12,9 @@ namespace MiniStore
 {
     public partial class Products : Form
     {
-        private int id = 0;
+
+
+
         public Products()
         {
             InitializeComponent();
@@ -24,9 +26,10 @@ namespace MiniStore
             newProduct.Visible = true;
         }
 
-        public void AddProduct(string name,string category,double price,int stock,string registrationNum) 
+        public void AddProduct(string Id, string name, string category, string price, string stock, string registrationNum)
         {
-            dgvProducts.Rows.Add(id++,name,category,price,stock,registrationNum);
+            dgvProduct.Rows.Add(Id, name, category, price, stock, registrationNum);
+            
         }
     }
 }

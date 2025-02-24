@@ -12,6 +12,8 @@ namespace MiniStore
 {
     public partial class AddProduct : Form
     {
+        int id = 0;
+        
         public AddProduct()
         {
             InitializeComponent();
@@ -31,8 +33,9 @@ namespace MiniStore
         {
             if (nameTxtBox.Text != "" && priceTxtBox.Text != "" && categoryCB.Text != "" && registrationNumberTxtBox.Text != "" && stockTxtBox.Text != "")
             {
+                Products product = new Products();
+                product.AddProduct(Convert.ToString(id), nameTxtBox.Text, categoryCB.Text, priceTxtBox.Text, stockTxtBox.Text, registrationNumberTxtBox.Text);
                 MessageBox.Show("Product succesfully added");
-                
             }
             else 
             {
@@ -48,7 +51,7 @@ namespace MiniStore
             }
             if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
             {
-                e.Handled = true; // Ignorar el punto si ya existe
+                e.Handled = true;
             }
         }
 

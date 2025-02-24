@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             newProductBtn = new CustomBtn();
-            dgvProducts = new DataGridView();
+            dgvProduct = new DataGridView();
             productId = new DataGridViewTextBoxColumn();
             productName = new DataGridViewTextBoxColumn();
             productCategory = new DataGridViewTextBoxColumn();
             productPrice = new DataGridViewTextBoxColumn();
             productStock = new DataGridViewTextBoxColumn();
             productRegistrationNum = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dgvProducts).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvProduct).BeginInit();
             SuspendLayout();
             // 
             // newProductBtn
@@ -49,7 +49,7 @@
             newProductBtn.FlatAppearance.BorderSize = 0;
             newProductBtn.FlatStyle = FlatStyle.Flat;
             newProductBtn.ForeColor = Color.White;
-            newProductBtn.Location = new Point(313, 355);
+            newProductBtn.Location = new Point(552, 401);
             newProductBtn.Name = "newProductBtn";
             newProductBtn.Size = new Size(150, 40);
             newProductBtn.TabIndex = 1;
@@ -58,14 +58,14 @@
             newProductBtn.UseVisualStyleBackColor = false;
             newProductBtn.Click += newProductBtn_Click;
             // 
-            // dgvProducts
+            // dgvProduct
             // 
-            dgvProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProducts.Columns.AddRange(new DataGridViewColumn[] { productId, productName, productCategory, productPrice, productStock, productRegistrationNum });
-            dgvProducts.Location = new Point(67, 114);
-            dgvProducts.Name = "dgvProducts";
-            dgvProducts.Size = new Size(643, 150);
-            dgvProducts.TabIndex = 2;
+            dgvProduct.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvProduct.Columns.AddRange(new DataGridViewColumn[] { productId, productName, productCategory, productPrice, productStock, productRegistrationNum });
+            dgvProduct.Location = new Point(261, 147);
+            dgvProduct.Name = "dgvProduct";
+            dgvProduct.Size = new Size(727, 195);
+            dgvProduct.TabIndex = 2;
             // 
             // productId
             // 
@@ -94,26 +94,26 @@
             // 
             // productRegistrationNum
             // 
-            productRegistrationNum.HeaderText = "Registration Number";
+            productRegistrationNum.HeaderText = "Registration";
             productRegistrationNum.Name = "productRegistrationNum";
             // 
             // Products
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(dgvProducts);
+            ClientSize = new Size(1264, 549);
+            Controls.Add(dgvProduct);
             Controls.Add(newProductBtn);
             Name = "Products";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Products";
-            ((System.ComponentModel.ISupportInitialize)dgvProducts).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvProduct).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
         private CustomBtn newProductBtn;
-        private DataGridView dgvProducts;
+        private DataGridView dgvProduct;
         private DataGridViewTextBoxColumn productId;
         private DataGridViewTextBoxColumn productName;
         private DataGridViewTextBoxColumn productCategory;
